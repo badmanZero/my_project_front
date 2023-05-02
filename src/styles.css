@@ -1,0 +1,21 @@
+body, html{height:100vh;}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: #F5F5FF;
+}
+
+.mat-form-field-outline-start{
+  background-color: rgb(234, 228, 255) !important;
+}
+.mat-form-field-outline-gap{
+  background-color: rgb(234, 228, 255) !important;
+}
+.mat-form-field-outline-end{
+  background-color: rgb(234, 228, 255) !important;
+}
+
+.mat-select-panel{
+  background-color: rgb(234, 228, 255) !important;
+}

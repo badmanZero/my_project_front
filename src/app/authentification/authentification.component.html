@@ -1,0 +1,16 @@
+<div class="corp">
+    <div class="form-task">
+      <span class="message-error" *ngIf="isError"><mat-icon>error</mat-icon> {{ errors }}</span>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <mat-form-field appearance="outline">
+        <mat-label for="login">login</mat-label>
+        <input matInput placeholder="Placeholder" name="username" ngModel required #login="ngModel">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label for="mdp">Password</mat-label>
+        <input matInput placeholder="Placeholder" name="password" ngModel required #mdp="ngModel">
+      </mat-form-field>
+      <button class="button button-valid" type="submit">Envoyer</button>
+    </form>
+    </div>
+  </div>

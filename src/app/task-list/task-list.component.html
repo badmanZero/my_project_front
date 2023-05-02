@@ -1,0 +1,48 @@
+
+
+
+<div class="corp">
+
+    <div class="nav-button">
+        <button class="button-add" mat-fab color="primary" aria-label="icon button" [routerLink]="['/taskCreate']" >
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+
+    <mat-card class="card-type-task">
+        <mat-card-title>A FAIRE</mat-card-title>
+        <div class="contener-task">
+            <mat-card class="card-task" *ngFor="let task of filterItemsOfType('a faire')" [routerLink]="['/taskDetail']">
+                <mat-card-title>{{ task.name }}</mat-card-title>
+                <mat-card-subtitle>Affectation : {{ task.affectation }}</mat-card-subtitle>
+                <mat-card-subtitle>Avancement : {{ task.etat }}</mat-card-subtitle>
+                <mat-card-subtitle>type : {{ task.type }}</mat-card-subtitle>
+            </mat-card>
+        </div>
+    </mat-card>
+
+    <mat-card class="card-type-task">
+        <mat-card-title>EN COURS</mat-card-title>
+        <div class="contener-task">
+            <mat-card class="card-task" *ngFor="let task of filterItemsOfType('en cours')" [routerLink]="['/taskDetail', task.id]">
+                <mat-card-title>{{ task.name }}</mat-card-title>
+                <mat-card-subtitle>Affectation : {{ task.affectation }}</mat-card-subtitle>
+                <mat-card-subtitle>Avancement : {{ task.etat }}</mat-card-subtitle>
+                <mat-card-subtitle>type : {{ task.type }}</mat-card-subtitle>
+            </mat-card>
+        </div>
+    </mat-card>
+
+    <mat-card class="card-type-task">
+        <mat-card-title>FAIT</mat-card-title>
+        <div class="contener-task">
+            <mat-card class="card-task" *ngFor="let task of filterItemsOfType('fait')" [routerLink]="['/taskDetail']">
+                <mat-card-title>{{ task.name }}</mat-card-title>
+                <mat-card-subtitle>Affectation : {{ task.affectation }}</mat-card-subtitle>
+                <mat-card-subtitle>Avancement : {{ task.etat }}</mat-card-subtitle>
+                <mat-card-subtitle>type : {{ task.type }}</mat-card-subtitle>
+            </mat-card>
+        </div>
+    </mat-card>
+
+</div>

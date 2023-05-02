@@ -1,0 +1,19 @@
+.container-body{
+    min-height: 80vh;
+}
+
+.card-task{
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.card-task mat-card-title{
+    text-align: center;
+}
+
+.card-sous-task{
+    margin-top: 10px;
+}

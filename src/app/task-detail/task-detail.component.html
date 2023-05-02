@@ -1,0 +1,19 @@
+<div class='container-body'>
+    <!-- <mat-card class="card-task" *ngFor="let task of filterItemsOfType('a faire')"> -->
+    <mat-card class="card-task">
+        <mat-card>
+            <mat-card-title>{{task.name}}</mat-card-title>
+            <mat-card-subtitle>{{task.description}}</mat-card-subtitle>
+            <mat-card-subtitle>{{task.affectation}}</mat-card-subtitle>
+            <mat-card-subtitle>{{task.etat}}</mat-card-subtitle>
+            <mat-card-subtitle>{{task.type}}</mat-card-subtitle>
+        </mat-card>
+
+        <mat-card class="card-sous-task">
+            <mat-card-title>sous tache</mat-card-title>
+            <mat-card-subtitle>Description</mat-card-subtitle>
+        </mat-card>
+
+    </mat-card>
+</div>
+

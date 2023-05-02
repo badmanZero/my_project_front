@@ -1,0 +1,37 @@
+<div class="corp">
+  <div class="form-task">
+    <span class="message-error" *ngIf="isError"><mat-icon>error</mat-icon> {{ errors }}</span>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field appearance="outline">
+      <mat-label for="name">Name</mat-label>
+      <input matInput placeholder="Placeholder" name="name" ngModel required #name="ngModel">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="description">Description</mat-label>
+      <textarea matInput name="description" ngModel #description="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="affectation">Affectation</mat-label>
+      <mat-select name="affectation" ngModel required #affectation="ngModel">
+        <mat-option *ngFor="let user of users" value="{{ user.id }}">{{ user.nom }} {{ user.prenom }}</mat-option>
+      </mat-select>
+      <!-- <input matInput placeholder="Placeholder" name="affectation" ngModel required #affectation="ngModel"> -->
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="etat">Etat</mat-label>
+      <mat-select name="etat" ngModel required #etat="ngModel">
+        <mat-option *ngFor="let state of states" value="{{ state.id }}">{{ state.name }}</mat-option>
+      </mat-select>
+      <!-- <input matInput placeholder="Placeholder" name="etat" ngModel required #etat="ngModel"> -->
+    </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label for="type">Type</mat-label>
+    <mat-select name="type" ngModel required #type="ngModel">
+      <mat-option *ngFor="let type of types" value="{{ type.id }}">{{ type.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+    <button class="button button-valid" type="submit">Envoyer</button>
+  </form>
+  </div>
+</div>
+  
